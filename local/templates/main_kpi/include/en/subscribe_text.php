@@ -1,0 +1,1 @@
+Please, leave your email address and you will receive all company news

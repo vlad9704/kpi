@@ -1,0 +1,242 @@
+<?if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();?>
+
+<div class="clock-box" id="<?=$arParams["KPI_COUNTDOWN_ID"]?>"></div>
+<?
+$arDate = $arParams["SET_DATE"];
+pre($arDate);
+$arStart["DAY"] = date("d", strtotime($arDate));
+$arStart["MONTH"] = date("m", strtotime($arDate));
+$arStart["YAER"] = date("Y", strtotime($arDate));
+?>
+<script>
+
+	var clockBox = $('#<?=$arParams["KPI_COUNTDOWN_ID"]?>');
+	if (clockBox.length > 0) {
+		
+		/*TIMER*/
+		var days, hours, minutes, seconds; // переменные для единиц времени
+
+		var countdown = document.getElementById('<?=$arParams["KPI_COUNTDOWN_ID"]?>'); // получить элемент тега
+
+		getCountdown();
+
+		setInterval(function () { getCountdown(); }, 1000);
+
+		function getCountdown(){
+
+			//d0= new Date('<?=$arStart["MONTH"]?> <?=$arStart["DAY"]?>, <?=$arStart["YAER"]?> 00:00:00');
+			dateStart= new Date('<?=$arStart["MONTH"]?> <?=$arStart["DAY"]?>, <?=$arStart["YAER"]?> 00:00:00');
+				
+			//d1=new Date();
+			dateToday=new Date();
+			
+			if (dateToday.getTimezoneOffset() == 0) 
+				(a=dateToday.getTime() + (4*60*60*1000))
+			else 
+				(a=dateToday.getTime());
+			
+			dateToday.setTime(a);
+			dr = (dateToday.getTime() - dateStart.getTime());
+			days = Math.floor(dr / (1000*60*60*24));
+			dateToday.setTime(dr);
+			hours = dateToday.getUTCHours();
+			minutes = dateToday.getUTCMinutes();
+			seconds = dateToday.getSeconds();
+			//document.write('<span>Прошло ' + Math.floor(d) + ' дней, ' + h + ' часов, ' + m + ' минут, ' + s + ' секунд.</span>');
+			// строка обратного отсчета  + значение тега
+			countdown.innerHTML = htmlTimerBlock(days,"days") 
+								+ htmlTimerBlock(hours,"hours") 
+								+ htmlTimerBlock(minutes,"minutes") 
+								+ htmlTimerBlock(seconds,"seconds") ; 
+								
+//			countdown.innerHTML = "<div class='clock-box__item'><div class='clock-box__count'>" + days + "</div><div class='clock-box__text'>дня</div></div><div class='clock-box__item'><div class='clock-box__count'>" + hours + "</div><div class='clock-box__text'>часа</div></div><div class='clock-box__item'><div class='clock-box__count'>" + minutes + "</div><div class='clock-box__text'>минут</div></div><div class='clock-box__item'><div class='clock-box__count'>" + seconds + "</div><div class='clock-box__text'>секунд</div></div>"; 
+		}
+
+		function pad(n) {
+			return (n < 10 ? '0' : '') + n;
+		}
+		//declensionOfNouns( number, one, two, five )
+    }
+	
+	function declensionOfNouns( number, one, two, five ) 
+	{
+		number = Math.abs(number);
+		number %= 100;
+		if (number >= 5 && number <= 20) {
+			return five;
+		}
+		number %= 10;
+		if (number == 1) {
+			return one;
+		}
+		if (number >= 2 && number <= 4) {
+			return two;
+		}
+		return five;
+	}
+	
+ 	function htmlTimerBlock(num,type) 
+	{
+		if(type == "days")
+		{	
+			return 	'<div class="clock-box__item">'+ 
+						'<div class="clock-box__count">'+
+							num + 
+						'</div>'+
+					'<div class="clock-box__text">'+
+						declensionOfNouns( num, 'день', 'дня', 'дней' )+
+					'</div></div>';
+		}
+		else if(type == "hours")
+		{
+			return 	'<div class="clock-box__item">'+ 
+						'<div class="clock-box__count">'+
+							num + 
+						'</div>'+
+					'<div class="clock-box__text">'+
+						declensionOfNouns( num, 'час', 'часа', 'часов' )+
+					'</div></div>';
+		}		
+		else if(type == "minutes")
+		{
+			return 	'<div class="clock-box__item">'+ 
+						'<div class="clock-box__count">'+
+							num + 
+						'</div>'+
+					'<div class="clock-box__text">'+
+						declensionOfNouns( num, 'минута', 'минуты', 'минут' )+
+					'</div></div>';
+		}		
+		else if(type == "seconds")
+		{
+			return 	'<div class="clock-box__item">'+ 
+						'<div class="clock-box__count">'+
+							num + 
+						'</div>'+
+					'<div class="clock-box__text">'+
+						declensionOfNouns( num, 'секунда', 'секунды', 'секунд' )+
+					'</div></div>';
+		}
+		else
+		{		
+			return 	'<div class="clock-box__item">'+ 
+						'<div class="clock-box__count">'+
+							num + 
+						'</div></div>';
+					/*+
+					'<div class="clock-box__text">'+
+						declensionOfNouns( num, 'x', 'xx', 'xxx' )+
+					'</div></div>'; */
+		}
+	} 
+	
+/*  	function htmlHours( hours ) 
+	{
+		return 	'<div class="clock-box__item">'+ 
+					'<div class="clock-box__count">'+
+						days + 
+					'</div>'+
+				'<div class="clock-box__text">'+
+					declensionOfNouns( days, 'день', 'дня', 'дней' )+
+				'</div></div>';
+	}  */
+	
+
+	
+	
+	//console.log(timerMaskHtml(3));
+	
+
+<?
+/* 	if (clockBox.length > 0) {
+	
+		
+		var target_date00 = new Date().getTime() + (10000*3600*48); // установить дату обратного отсчета
+		var target_date = <?=date("U", strtotime("01.12.2019 00:00:00"))*1000?>; // установить дату обратного отсчета
+		console.log(target_date);
+		
+		console.log(target_date00);
+		var days, hours, minutes, seconds; // переменные для единиц времени
+
+		var countdown = document.getElementById('<?=$arParams["KPI_COUNTDOWN_ID"]?>'); // получить элемент тега
+
+		getCountdown();
+
+		setInterval(function () { getCountdown(); }, 1000);
+
+		function getCountdown(){
+
+			var current_date = new Date().getTime();
+			var seconds_left = (target_date - current_date) / 1000;
+
+			days = pad( parseInt(seconds_left / 86400) );
+			seconds_left = seconds_left % 86400;
+
+			hours = pad( parseInt(seconds_left / 3600) );
+			seconds_left = seconds_left % 3600;
+
+			minutes = pad( parseInt(seconds_left / 60) );
+			seconds = pad( parseInt( seconds_left % 60 ) );
+
+			// строка обратного отсчета  + значение тега
+			countdown.innerHTML = "<div class='clock-box__item'><div class='clock-box__count'>" + days + "</div><div class='clock-box__text'>дня</div></div><div class='clock-box__item'><div class='clock-box__count'>" + hours + "</div><div class='clock-box__text'>часа</div></div><div class='clock-box__item'><div class='clock-box__count'>" + minutes + "</div><div class='clock-box__text'>минут</div></div><div class='clock-box__item'><div class='clock-box__count'>" + seconds + "</div><div class='clock-box__text'>секунд</div></div>"; 
+		}
+
+		function pad(n) {
+			return (n < 10 ? '0' : '') + n;
+		}
+		
+    } */
+	?>
+</script>
+
+<?
+
+/* <div class="hotline-box">
+
+	<?if(!empty($arParams["KPI_TEXT"])):?>
+		<p><?=htmlspecialchars_decode($arParams["KPI_TEXT"])?></p>
+	<?endif;?>
+	
+	<br>
+	
+	<?if(!empty($arParams["KPI_TITLE"])):?>
+		<h3><?=htmlspecialchars_decode($arParams["KPI_TITLE"])?></h3>
+	<?endif;?>
+
+	<br>
+	<?
+	$arParams["KPI_PHONES"] = array_diff($arParams["KPI_PHONES"], array(''));
+	foreach($arParams["KPI_PHONES"] as $arPhone)
+	{
+		$truePhone = (str_replace(array("(",")","-","_"," "),array(""),$arPhone));
+	?>
+	<div class="hotline-box__phone">
+		<a href="tel:<?=$truePhone?>"><?=$arPhone;?></a>
+	</div>
+	<?
+	}
+	?>
+
+	<br>
+	<?
+	$arParams["KPI_EMAILS"] = array_diff($arParams["KPI_EMAILS"], array(''));
+	foreach($arParams["KPI_EMAILS"] as $arEmail)
+	{
+	?>
+		<div class="hotline-box__email">
+			<a href="emailto:<?=$arEmail?>"><?=$arEmail;?></a>
+		</div>
+	<?
+	}
+	?>
+
+</div>
+
+<?if(!empty($arParams["KPI_BACK_BTN_LINK"]) && !empty($arParams["KPI_BACK_BTN_TEXT"])):?>
+	<div class="link-back">
+		<a href="<?=$arParams["KPI_BACK_BTN_LINK"]?>"><?=$arParams["KPI_BACK_BTN_TEXT"]?></a>
+	</div>
+<?endif?> */
+
+?>

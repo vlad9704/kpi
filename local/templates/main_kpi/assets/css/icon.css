@@ -1,0 +1,86 @@
+@font-face {
+  font-family: 'menu-icon';
+  src:  url('../fonts/menu-icon/icomoon.eot?ayaaxu');
+  src:  url('../fonts/menu-icon/icomoon.eot?ayaaxu#iefix') format('embedded-opentype'),
+    url('../fonts/menu-icon/icomoon.ttf?ayaaxu') format('truetype'),
+    url('../fonts/menu-icon/icomoon.woff?ayaaxu') format('woff'),
+    url('../fonts/menu-icon/icomoon.svg?ayaaxu#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="iconMenu-"], [class*=" iconMenu-"] {
+  font-family: 'menu-icon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.iconMenu-deyatelnost_icon_2:before {
+  content: "\e900";
+}
+.iconMenu-deyatelnost_icon_3:before {
+  content: "\e901";
+}
+.iconMenu-deyatelnost_icon_4:before {
+  content: "\e902";
+
+}
+.iconMenu-kontakti_icon_1:before {
+  content: "\e903";
+
+}
+.iconMenu-kontakti_icon_2:before {
+  content: "\e904";
+
+}
+.iconMenu-kontakti_icon_3:before {
+  content: "\e905";
+
+}
+.iconMenu-kontakti_icon_4:before {
+  content: "\e906";
+
+}
+.iconMenu-o_kompanii_icon_1:before {
+  content: "\e907";
+
+}
+.iconMenu-o_kompanii_icon_2:before {
+  content: "\e908";
+
+}
+.iconMenu-o_kompanii_icon_3:before {
+  content: "\e909";
+
+}
+.iconMenu-o_kompanii_icon_4:before {
+  content: "\e90a";
+
+}
+.iconMenu-o_kompanii_icon_5:before {
+  content: "\e90b";
+
+}
+.iconMenu-o_kompanii_icon_6:before {
+  content: "\e90c";
+
+}
+.iconMenu-press_centr_icon_1:before {
+  content: "\e90d";
+
+}
+.iconMenu-press_centr_icon_2:before {
+  content: "\e90e";
+
+}
+.iconMenu-deyatelnost_icon_1:before {
+  content: "\e90f";
+
+}
