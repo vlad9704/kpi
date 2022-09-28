@@ -105,7 +105,7 @@ Loc::loadMessages(__FILE__);
 					<div class="small-12 medium-3 large-3 column">
 						<div class="footer-about">
 							<a href="<?=SITE_DIR?>" class="footer-about__logo">
-								<i class="icon-logo-3"></i>
+								<img src="/local/templates/main_kpi/assets/img/svg/logo_footer.svg" alt="logo">
 							</a>
 							<div class="footer-about__text">
 								<?$APPLICATION->IncludeComponent(

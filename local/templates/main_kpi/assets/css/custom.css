@@ -13,11 +13,11 @@
 }
 
 .page-wrapper .button--red:hover{
-	background: #6f1650 !important;
+	background: #0041CD !important;
 }
 
 .page-wrapper .button:hover{
-	background: #29166f;
+	background: #0041CD;
 	color: #fff;
 }
 

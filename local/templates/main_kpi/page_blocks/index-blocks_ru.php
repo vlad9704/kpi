@@ -323,6 +323,7 @@
 </div>
 
 <div class="media-box-wrapper wow fadeInUp">
+	<div class="media-box-wrapper_bg2"></div>
 	<div class="row">
 		<div class="small-12 column">
 			<div class="title-box">
