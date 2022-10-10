@@ -83,7 +83,48 @@ endif;
 	</div>
 <?endif;?>
 
+<?$APPLICATION->IncludeComponent(
+	"bitrix:forum.topic.reviews",
+	"",
+	Array(
+		"AJAX_POST" => "Y",
+		"CACHE_TIME" => "0",
+		"CACHE_TYPE" => "N",
+		"DATE_TIME_FORMAT" => "d.m.Y H:i:s",
+		"EDITOR_CODE_DEFAULT" => "N",
+		"ELEMENT_ID" => $arResult["ID"],
+		"FILES_COUNT" => "2",
+		"FORUM_ID" => "1",
+		"IBLOCK_ID" => "1",
+		"IBLOCK_TYPE" => "content",
+		"MESSAGES_PER_PAGE" => "10",
+		"NAME_TEMPLATE" => "",
+		"PAGE_NAVIGATION_TEMPLATE" => "",
+		"PREORDER" => "Y",
+		"RATING_TYPE" => "",
+		"SHOW_AVATAR" => "N",
+		"SHOW_LINK_TO_FORUM" => "N",
+		"SHOW_MINIMIZED" => "N",
+		"SHOW_RATING" => "N",
+		"URL_TEMPLATES_DETAIL" => "",
+		"URL_TEMPLATES_PROFILE_VIEW" => "",
+		"URL_TEMPLATES_READ" => "",
+		"USE_CAPTCHA" => "Y"
+	)
+);?>
 
-
-
-
+<?if(!$USER->IsAuthorized()):?>
+	<div class="i_auth_block">
+		<p>Для того, чтобы оставить комментарий, необходимо авторизоваться.</p>
+		<?$APPLICATION->IncludeComponent(
+			"bitrix:system.auth.form",
+			"",
+			Array(
+				"FORGOT_PASSWORD_URL" => SITE_DIR."auth/forgot_password.php",
+				"PROFILE_URL" => SITE_DIR."auth/profile.php",
+				"REGISTER_URL" => SITE_DIR."auth/register.php",
+				"SHOW_ERRORS" => "N"
+			)
+		);?>
+	</div>
+<?endif;?>
