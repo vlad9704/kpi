@@ -4135,6 +4135,11 @@ body {
 	font-weight: 400;
 }
 
+.header-wrapper__top .logo-box {
+	width: 59px;
+	height: 65px;
+}
+
 .header-wrapper__middle {
 	position: relative;
 	-webkit-box-flex: 0;

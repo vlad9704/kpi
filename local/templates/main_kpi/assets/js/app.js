@@ -94,7 +94,7 @@ $(document).ready(function(){
     
 	$(".header-slider").owlCarousel({
 		autoplay: true,
-		autoplayTimeout: 20000,
+		autoplayTimeout: 8000,
 		autoplayHoverPause: false,
 		items: 1,
 		loop: true,
