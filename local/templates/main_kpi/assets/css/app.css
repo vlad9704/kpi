@@ -5154,6 +5154,7 @@ body {
 }
 
 .staff-company {
+	max-width: 100%;
 	position: relative;
 	transition: .15s ease;
 	background: #fff;
