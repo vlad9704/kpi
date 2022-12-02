@@ -13,7 +13,7 @@
 $this->setFrameMode(true);
 ?>
 <div style="padding: 0 15px 15px;">
-	<p><?=GetMessage('CT_BNL_RESUME_EMAIL')?> - <a href="mailto:cv@kpi.kz" class="link link--mail">cv@kpi.kz</a></p>
+	<p><?=GetMessage('CT_BNL_RESUME_EMAIL')?></p>
 	<p><?=GetMessage('CT_BNL_RESUME_TEXT')?></p>
 </div>
 <?foreach($arResult["ITEMS"] as $arItem):?>
