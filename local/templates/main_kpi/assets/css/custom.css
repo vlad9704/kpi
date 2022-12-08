@@ -394,3 +394,32 @@ div.editor_dialog {
 .header-wrapper--menu .header-wrapper__top .icon_auth svg {
 	fill: #fff;
 }
+
+/* other pages */
+.polip_block {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.internal_container p {
+	font-size: 16px;
+}
+.internal_container .title-box {
+	font-size: 24px;
+}
+
+.ul_directions_cont {
+	margin-top: 30px;
+	display: flex;
+	gap: 100px;
+	flex-wrap: wrap;
+}
+
+.ul_directions_cont ul {
+	padding-left: 25px;
+}
+
+.ul_directions_cont ul li:nth-child(2) {
+	margin-top: 10px;
+}

@@ -419,7 +419,7 @@ if(!$bIsMainPage && !$bIsProjectPage && !$bIsHistoryPage)
 {
 ?>
 	<div class="row align-center">
-		<div class="small-12 medium-10 large-<?=$bIsSearchPage?"8":"8"?> column">
+		<div class="small-12 medium-10 large-<?=$bIsSearchPage?"8":"11"?> column<?if(CSite::InDir('/'.LANGUAGE_ID.'/activities/')) echo ' internal_container'?>">
 		<?if(!$bIsHtmlPage):?>
 			<?$APPLICATION->ShowViewContent('html_top_menu_on_page');?>
 		<?endif;?>

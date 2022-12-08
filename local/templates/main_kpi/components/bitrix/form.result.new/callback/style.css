@@ -1,0 +1,192 @@
+table.form-table {
+	width: 100%;
+	border-collapse: collapse;
+	font-size: 100%;
+	font-weight: normal;
+	line-height: 160%;
+}
+
+table.form-table th, table.form-table td {
+}
+
+table.form-table th {
+	background-repeat: repeat-x;
+	text-align: left;
+	color: #25639A;
+}
+
+
+table.form-table td {
+	padding: 5px;
+}
+
+.form-required {
+	color: red;
+}
+
+.error-fld {
+	color: red;
+}
+
+.resume_form_container {
+	background: rgba(0, 65, 205, 0.11);
+	border-radius: 5px;
+}
+
+.resume_form_container table.form-table tbody {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	grid-column-gap: 30px;
+}
+
+.resume_form_container table.form-table tr {
+	display: flex;
+	flex-direction: column;
+	margin-top: 20px;
+}
+
+.resume_form_container table.form-table tr {
+	width: 100%;
+}
+
+@media screen and (min-width: 760px) {
+	.resume_form_container {
+		padding: 0 60px 30px;
+	}
+	.resume_form_container table.form-table tr:nth-child(-1n+10) {
+		width: 45%;
+	}
+}
+@media screen and (max-width: 759px) {
+	.resume_form_container {
+		padding: 0 10px 30px;
+	}
+}
+
+.link-back {
+	margin-top: 20px;
+}
+
+.page-wrapper .resume_form_container input[type="text"],
+.page-wrapper .resume_form_container input[type="search"],
+.page-wrapper .resume_form_container input[type="email"],
+.page-wrapper .resume_form_container input[type="tel"],
+.page-wrapper .resume_form_container input[type="password"],
+.page-wrapper .resume_form_container textarea {
+	background-color: #fff;
+	border-radius: 5px;
+}
+
+.input_submit_container {
+	display: flex;
+}
+
+.page-wrapper .resume_form_container [type="submit"],
+.page-wrapper .resume_form_container [type="reset"] {
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+	outline: none;
+	text-decoration: none;
+	font-size: 14px;
+	vertical-align: middle;
+	color: rgb(255 255 255);
+	text-align: center;
+	border-radius: 4px;
+	background-color: rgba(0, 65, 205, 0.88);;
+	height: 40px;
+	padding: 10px 20px;
+	box-sizing: border-box;
+	border: none;
+	margin: 0;
+	transition: background-color 0.2s;
+	margin-left: 7px;
+	min-width: 120px;
+}
+
+.page-wrapper .resume_form_container input:hover,
+.page-wrapper .resume_form_container input:focus {
+	box-shadow: 0px 0px 0px 3px #98CBFF;
+}
+
+font.errortext {
+	font-size: 16px;
+}
+
+.resume_title {
+	font-family: 'Sirius Regular';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 22px;
+	line-height: 34px;
+	display: flex;
+	align-items: center;
+	color: #000000;
+}
+
+.resume_title_hr {
+	width: 111.8px;
+	height: 0px;
+	margin-top: 5px;
+	border: 2px solid #006EFF;
+}
+.resume_description {
+	font-family: 'Sirius Regular';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 15px !important;
+	line-height: 22px;
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------- INPUT FILE */
+.input-file {
+	position: relative;
+	display: inline-block;
+}
+.input-file span {
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+	outline: none;
+	text-decoration: none;
+	font-size: 14px;
+	vertical-align: middle;
+	color: rgb(255 255 255);
+	text-align: center;
+	border-radius: 4px;
+	background-color: rgba(0, 65, 205, 0.88);;
+	height: 40px;
+	line-height: 20px;
+	padding: 10px 20px;
+	box-sizing: border-box;
+	border: none;
+	margin: 0;
+	transition: background-color 0.2s;
+}
+.input-file input[type=file] {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+	display: block;
+	width: 0;
+	height: 0;
+}
+
+/* Focus */
+.input-file input[type=file]:focus + span {
+	box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+/* Hover/active */
+.input-file:hover span {
+	background-color: #287de0;
+}
+.input-file:active span {
+	background-color: #014398;
+}
+
+/* Disabled */
+.input-file input[type=file]:disabled + span {
+	background-color: #eee;
+}

@@ -26,7 +26,7 @@ if($cntBreadCrumbs>2)
 	 * функционал кнопки НАЗАД
 	 */
 ?>
-	<div class="row align-center"><div class="small-12 medium-10 large-8 column">
+	<div class="row align-center"><div class="small-12 medium-10 large-11 column">
 		<div class="link-back breadcrumb--link-back"><a href="<?=$arResult[$cntBreadCrumbs-2]["LINK"]?>"><?=GetMessage("KPI_BACK_BUTTON_TEXT")?></a></div>			
 	</div></div>
 	
