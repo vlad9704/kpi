@@ -1,0 +1,6 @@
+<?
+$sSectionName = "Бағыттар";
+$arDirProperties = Array(
+
+);
+?>

@@ -1,0 +1,6 @@
+<?
+$sSectionName = "Құттықтау";
+$arDirProperties = Array(
+
+);
+?>

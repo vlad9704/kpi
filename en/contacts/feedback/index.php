@@ -1,0 +1,85 @@
+<?
+require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
+$APPLICATION->SetTitle("Feedback");
+?><?$APPLICATION->IncludeComponent(
+	"kpi:forms.d7", 
+	"feedback", 
+	array(
+		"AJAX_MODE" => "Y",
+		"AJAX_OPTION_ADDITIONAL" => "",
+		"AJAX_OPTION_HISTORY" => "N",
+		"AJAX_OPTION_JUMP" => "Y",
+		"AJAX_OPTION_STYLE" => "Y",
+		"EMAIL_TO" => "",
+		"EVENT_MESSAGE_ID" => array(
+			0 => "30",
+			1 => "",
+		),
+		"FIELD_CODE" => array(
+			0 => "NAME",
+			1 => "PREVIEW_TEXT",
+			2 => "",
+		),
+		"FILES_PROPERTY_CODE" => array(
+			0 => "FILE",
+			1 => "",
+		),
+		"FORM_ID" => "feedback",
+		"FORM_SUBMIT" => "Send",
+		"FORM_SUBTITLE" => "",
+		"FORM_TITLE" => "Form of Feedback",
+		"FORM_TITLE_FOR_EMAIL" => "",
+		"IBLOCK_ID" => "7",
+		"IBLOCK_TYPE" => "forms",
+		"NEW_NAME_COMPANY" => "Компания",
+		"NEW_NAME_EMAIL" => "E-mail",
+		"NEW_NAME_NAME" => "Name",
+		"NEW_NAME_PREVIEW_TEXT" => "Message",
+		"OK_TEXT" => "<p>Мы свяжемся с вами в течении 24 часов.<br>Если вы не хотите ждать, то вы можете написать нам на почту либо позвонить по горячей линии.</p>",
+		"OK_TEXT_TITLE" => "<h2>Thank you!</h2><h3>Your message has been sent.</h3>",
+		"PROPERTY_CODE" => array(
+			0 => "PHONE",
+			1 => "",
+		),
+		"REQUIRED_FIELDS" => array(
+			0 => "NAME",
+			1 => "PREVIEW_TEXT",
+			2 => "",
+		),
+		"REQUIRED_PROPERTY_CODE" => array(
+			0 => "PHONE",
+			1 => "",
+		),
+		"SEND_TO_ADMIN" => "Y",
+		"SEND_TO_USER" => "N",
+		"SORT_COMPANY" => "20",
+		"SORT_EMAIL" => "10",
+		"SORT_NAME" => "1",
+		"SORT_PREVIEW_TEXT" => "3",
+		"TEXT_APPEAL_TO_USER" => "",
+		"TEXT_MESSAGE_TO_USER" => "",
+		"COMPONENT_TEMPLATE" => "feedback",
+		"NEW_NAME_PHONE" => "Phone",
+		"SORT_PHONE" => "2",
+		"USE_PLACEHOLDER" => "Y",
+		"PLACEHOLDER_NAME" => "Ivanov Sergey Petrovich",
+		"PLACEHOLDER_PREVIEW_TEXT" => "Message text...",
+		"PLACEHOLDER_PHONE" => "+7 (___) ___ - __ - __",
+		"PLACEHOLDER_FILE" => "Файл",
+		"NEW_NAME_FILE" => "Прикрепить файл",
+		"SORT_FILE" => "4",
+		"KPI_BACK_BTN_TEXT" => "Back",
+		"KPI_BACK_BTN_LINK" => "/en/contacts/",
+		"USE_SMS_CONFIRM" => "N",
+		"OK_PHONES" => array(
+			0 => "+7 (7122) 30 65 00",
+			1 => "",
+		),
+		"OK_EMAILS" => array(
+			0 => "info@kpi.kz",
+			1 => "",
+		),
+		"OK_LOGO" => "/local/templates/main_kpi/assets/img/svg/logo_3.svg"
+	),
+	false
+);?><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

@@ -1,0 +1,6 @@
+<?
+$sSectionName = "Басқарма";
+$arDirProperties = Array(
+
+);
+?>

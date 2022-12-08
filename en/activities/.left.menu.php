@@ -1,0 +1,39 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"IGCC project", 
+		"/en/activities/ighk-project/", 
+		Array(), 
+		Array("class-icon"=>"iconMenu-deyatelnost_icon_1"), 
+		"" 
+	),
+	Array(
+		"Safety, labor and environmental protection", 
+		"/en/activities/safety-labor-and-environmental-protection/", 
+		Array(), 
+		Array("class-icon"=>"iconMenu-deyatelnost_icon_2"), 
+		"" 
+	),
+	Array(
+		"Procurement", 
+		"/en/activities/procurement/", 
+		Array(), 
+		Array("class-icon"=>"iconMenu-deyatelnost_icon_3"), 
+		"" 
+	),
+	Array(
+		"Career", 
+		"/en/activities/career/", 
+		Array(), 
+		Array("class-icon"=>"iconMenu-deyatelnost_icon_4"), 
+		"" 
+	),
+	Array(
+		"Marketing", 
+		"/en/activities/marketing/", 
+		Array(), 
+		Array(), 
+		"" 
+	)
+);
+?>

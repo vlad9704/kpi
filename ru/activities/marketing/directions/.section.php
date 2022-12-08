@@ -1,0 +1,6 @@
+<?
+$sSectionName = "Направления";
+$arDirProperties = Array(
+
+);
+?>

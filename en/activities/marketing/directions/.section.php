@@ -1,0 +1,6 @@
+<?
+$sSectionName = "Directions";
+$arDirProperties = Array(
+
+);
+?>
